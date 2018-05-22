@@ -2,6 +2,11 @@
 ## About:
 When you visit the index page (e.g. locahost:8000) a celery task will send a dummy email to site admin.
 Yep, this is a dummy celery task showcase :)
+To see how the things were implemented, open:
+1. apps/taskapp/celery.py -- this is where celery app was created and configured
+2. config/settings.py -- see INSTALLED_APPS to see how celery was registered
+3. apps/website/tasks.py -- a task called send_email_async is registed here. It sends an email with 10 seconds delay
+4. apps/website/views.py -- a place where IndexView calls send_email_to_admin() which calls send_email_async() task
 
 ## OS dependencies:
 1. Install redis-server:

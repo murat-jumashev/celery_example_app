@@ -1,0 +1,4 @@
+Django==2.0.5
+django-authtools==1.6.0
+celery==4.1.1
+redis==2.10.6

@@ -20,6 +20,7 @@ sudo apt-get install redis-server
 redis-cli ping
 ```
 You should get PONG as a response
+
 3. Done.
 
 ## Python dependencies (Python3):
